@@ -28,5 +28,19 @@ object ControlStructure extends App {
     writer => writer.println(LocalDateTime.now)
   }
   //endregion
+
   
+  //region By name parameter
+  val assertionFlag = true
+  def assert(predicate: => Boolean) = {
+    if (assertionFlag && !predicate) {
+      throw new AssertionError
+    }
+  }
+  
+  assert(5 > 3)
+  
+  val list = List("3")
+  assert(list.nonEmpty)
+  //endregion
 }
