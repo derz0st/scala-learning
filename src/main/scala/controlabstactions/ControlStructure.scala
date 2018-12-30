@@ -25,7 +25,7 @@ object ControlStructure extends App {
   
   val file = new File("file.txt")
   withPrintWriter(file) {
-    writer => writer.println(new LocalDateTime)
+    writer => writer.println(LocalDateTime.now)
   }
   //endregion
   
